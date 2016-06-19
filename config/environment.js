@@ -6,10 +6,20 @@ module.exports = function(environment) {
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
+    
+    firebase:{
+    	apiKey: 'AIzaSyDFthUrdsyN0R0JzoUecyqGoigOqX8Zz9Y',
+    	authDomain: 't-shirt-shop-75fc7.firebaseapp.com',
+    	databaseURL: 'https://t-shirt-shop-75fc7.firebaseio.com',
+    	storageBucket: 't-shirt-shop-75fc7.appspot.com',    
+    },
+    
     EmberENV: {
       FEATURES: {
-        // Here you can enable experimental features on an ember canary build
-        // e.g. 'with-controller': true
+        "rules": {
+    		".read": true,
+    		".write": true
+ 		 }
       }
     },
 
@@ -20,11 +30,11 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
-    // ENV.APP.LOG_RESOLVER = true;
-    // ENV.APP.LOG_ACTIVE_GENERATION = true;
-    // ENV.APP.LOG_TRANSITIONS = true;
-    // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
-    // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.APP.LOG_RESOLVER = true;
+    ENV.APP.LOG_ACTIVE_GENERATION = true;
+    ENV.APP.LOG_TRANSITIONS = true;
+    ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
+    ENV.APP.LOG_VIEW_LOOKUPS = true;
   }
 
   if (environment === 'test') {
